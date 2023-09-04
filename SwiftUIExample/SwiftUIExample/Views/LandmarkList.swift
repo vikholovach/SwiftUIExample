@@ -7,12 +7,28 @@
 
 import SwiftUI
 
+
+
 struct LandmarkList: View {
+    
+    
     var body: some View {
-        List(landmarks) { landmark in
-            LandmarkRowView(
-                landmark: landmark)
+        NavigationView {
+            List(landmarks) { landmark in
+                NavigationLink(destination: {
+                    //destination -> View on which we want to jump in
+                    LandmarkDetailView(landmark: landmark)
+                }, label: {
+                    //view which we want to show in list
+                    LandmarkRowView(
+                        landmark: landmark)
+                })
+                
+            }
+            .navigationTitle("Landmarks")
+             
         }
+      
     }
 }
 
@@ -21,3 +37,4 @@ struct LandmarkList_Previews: PreviewProvider {
         LandmarkList()
     }
 }
+
