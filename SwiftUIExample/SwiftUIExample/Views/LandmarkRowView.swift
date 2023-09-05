@@ -21,7 +21,11 @@ struct LandmarkRowView: View {
                 .clipShape(Circle())
             
             Text(landmark.name)
-            
+            Button("Show Coordinates", action: {
+                print(landmark.locationCoordinate)
+            })
+            //in order to make button tappable we need to add .borderless to the button. it wil allow us to use button even if list is laying inside in Navigation
+            .buttonStyle(.borderless)
             Spacer()
         }
     }
