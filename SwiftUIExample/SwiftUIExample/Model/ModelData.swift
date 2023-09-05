@@ -7,8 +7,21 @@
 
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
-
+final class ModelData: ObservableObject {
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+    //t show/hide LoadingView()
+    @Published var isLoading = true
+    
+    //in case of loading simulation
+    func loadData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
+            guard let self = self else {return}
+            self.landmarks = load("landmarkData.json")
+            self.isLoading = false
+        })
+        
+    }
+}
  
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
