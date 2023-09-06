@@ -62,6 +62,17 @@ struct LandmarkDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         
     }
+    
+    //MARK: - in case if you want to create your own Biding
+    private func createBiding() -> Binding<Bool> {
+        return Binding {
+            modelData.landmarks[landmarkIndex].isFavorite
+        } set: { newValue in
+            modelData.landmarks[landmarkIndex].isFavorite = newValue
+        }
+
+    }
+    
 }
 
 struct LandmarkDetailView_Previews: PreviewProvider {

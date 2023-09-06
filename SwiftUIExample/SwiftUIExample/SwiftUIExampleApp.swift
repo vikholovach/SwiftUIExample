@@ -15,7 +15,28 @@ struct SwiftUIExampleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //enviroment object approach
                 .environmentObject(modelData)
+            //enviroment approach
+                .environment(\.modelData, modelData)
+            
+            
+            //MARK: - if we will not set environmentObject app will crash, as we didnt pass modelData to main View, BUT with environment it wont happen as environment will have static let defaultValue: ModelData = ModelData()
         }
+    }
+}
+
+
+//MARK: approach with Evironment NOT EnvironmentObject
+
+struct ModelDataEnviromentKey: EnvironmentKey {
+    //default value
+    static let defaultValue: ModelData = ModelData()
+}
+
+extension EnvironmentValues {
+    var modelData: ModelData {
+        get { self[ModelDataEnviromentKey.self] }
+        set { self[ModelDataEnviromentKey.self] = newValue }
     }
 }

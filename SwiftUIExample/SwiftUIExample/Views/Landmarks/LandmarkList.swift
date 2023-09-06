@@ -9,7 +9,10 @@ import SwiftUI
 
 struct LandmarkList: View {
     
+    //environmantObject approach
     @EnvironmentObject var modelData: ModelData
+    //environment approach
+//    @Environment(\.modelData) var modelData: ModelData
     
     //propperty @State should be(or most of the times) be privet
     @State private var showFavoritesOnly = false

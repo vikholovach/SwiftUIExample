@@ -9,7 +9,7 @@ import Foundation
 
 final class ModelData: ObservableObject {
     @Published var landmarks: [Landmark] = load("landmarkData.json")
-    //t show/hide LoadingView()
+    //to show/hide LoadingView()
     @Published var isLoading = true
     
     //in case of loading simulation
