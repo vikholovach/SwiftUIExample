@@ -12,6 +12,8 @@ final class ModelData: ObservableObject {
     //to show/hide LoadingView()
     @Published var isLoading = true
     
+    var hikes: [Hike] = load("hikeData.json")
+    
     //in case of loading simulation
     func loadData() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
