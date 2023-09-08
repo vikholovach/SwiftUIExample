@@ -38,8 +38,10 @@ struct LandmarkList: View {
                             //view which we want to show in list
                             LandmarkRowView(
                                 landmark: landmark)
+                            
+                            
+                            
                         })
-                        
                     }
                 }
                 .navigationTitle("Landmarks")

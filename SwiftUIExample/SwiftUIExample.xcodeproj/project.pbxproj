@@ -18,6 +18,8 @@
 		363E1EAD2AAB672C00B54352 /* HikeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E1EA92AAB672C00B54352 /* HikeGraph.swift */; };
 		363E1EAE2AAB672C00B54352 /* HikeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E1EAA2AAB672C00B54352 /* HikeDetail.swift */; };
 		363E1EAF2AAB672C00B54352 /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E1EAB2AAB672C00B54352 /* HikeView.swift */; };
+		363E1EB12AAB6F7C00B54352 /* AnyTransition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E1EB02AAB6F7C00B54352 /* AnyTransition+Extension.swift */; };
+		363E1EB32AAB71C400B54352 /* Animation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E1EB22AAB71C400B54352 /* Animation+Extension.swift */; };
 		3643B9D12AA5E59200A46247 /* SwiftUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B9D02AA5E59200A46247 /* SwiftUIExampleApp.swift */; };
 		3643B9D32AA5E59200A46247 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3643B9D22AA5E59200A46247 /* ContentView.swift */; };
 		3643B9D52AA5E59400A46247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3643B9D42AA5E59400A46247 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		363E1EA92AAB672C00B54352 /* HikeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeGraph.swift; sourceTree = "<group>"; };
 		363E1EAA2AAB672C00B54352 /* HikeDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeDetail.swift; sourceTree = "<group>"; };
 		363E1EAB2AAB672C00B54352 /* HikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeView.swift; sourceTree = "<group>"; };
+		363E1EB02AAB6F7C00B54352 /* AnyTransition+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extension.swift"; sourceTree = "<group>"; };
+		363E1EB22AAB71C400B54352 /* Animation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Extension.swift"; sourceTree = "<group>"; };
 		3643B9CD2AA5E59200A46247 /* SwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3643B9D02AA5E59200A46247 /* SwiftUIExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleApp.swift; sourceTree = "<group>"; };
 		3643B9D22AA5E59200A46247 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		3643B9CF2AA5E59200A46247 /* SwiftUIExample */ = {
 			isa = PBXGroup;
 			children = (
+				36C1E2B22AA75CF300066B8D /* Helpers */,
 				363E1EA72AAB672C00B54352 /* Hikes */,
 				3643B9E62AA5E91600A46247 /* Model */,
 				3643B9E32AA5E86400A46247 /* Resources */,
@@ -138,8 +143,8 @@
 		3643B9DE2AA5E5B600A46247 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				363E1EA12AAB5E2200B54352 /* Badge */,
 				3643B9D22AA5E59200A46247 /* ContentView.swift */,
-				36C1E2B22AA75CF300066B8D /* Helpers */,
 				36C1E2B12AA75CDD00066B8D /* Landmarks */,
 			);
 			path = Views;
@@ -181,7 +186,8 @@
 				3643B9E12AA5E64500A46247 /* MapView.swift */,
 				36C1E2AF2AA759C600066B8D /* FavoriteButton.swift */,
 				36C1E2B32AA7611500066B8D /* LoaderView.swift */,
-				363E1EA12AAB5E2200B54352 /* Badge */,
+				363E1EB02AAB6F7C00B54352 /* AnyTransition+Extension.swift */,
+				363E1EB22AAB71C400B54352 /* Animation+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3643B9D32AA5E59200A46247 /* ContentView.swift in Sources */,
+				363E1EB32AAB71C400B54352 /* Animation+Extension.swift in Sources */,
 				36C1E2B42AA7611500066B8D /* LoaderView.swift in Sources */,
 				3643B9E22AA5E64500A46247 /* MapView.swift in Sources */,
 				36C1E2862AA6331300066B8D /* LandmarkDetailView.swift in Sources */,
@@ -273,6 +280,7 @@
 				3643B9D12AA5E59200A46247 /* SwiftUIExampleApp.swift in Sources */,
 				3643B9EE2AA618DE00A46247 /* LandmarkList.swift in Sources */,
 				3643B9E02AA5E5CE00A46247 /* CircleImage.swift in Sources */,
+				363E1EB12AAB6F7C00B54352 /* AnyTransition+Extension.swift in Sources */,
 				363E1EAC2AAB672C00B54352 /* GraphCapsule.swift in Sources */,
 				363E1EAF2AAB672C00B54352 /* HikeView.swift in Sources */,
 				3643B9EC2AA6137C00A46247 /* LandmarkRowView.swift in Sources */,
